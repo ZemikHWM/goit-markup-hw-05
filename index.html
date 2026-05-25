@@ -54,7 +54,7 @@
     </header>
     <main>
       <!--#region hero-->
-      <section id="hero1" class="section-hero">
+      <section id="hero" class="section-hero">
         <div class="container">
           <h1 class="hero-h1">Effective Solutions for Your Business</h1>
           <button type="button" class="hero-button">Order Service</button>
@@ -488,26 +488,26 @@
             </li>
           </ul>
         </div>
-        <form class="footer-subscribe">
-          <label class="footer-subscribe-label"
-            >Subscribe
+        <div class="footer-subscribe">
+          <p class="footer-subscribe-label">Subscribe</p>
+          <form class="footer-subscribe-form">
             <input
               type="email"
               name="email"
               class="footer-subscribe-input"
               placeholder="E-mail"
-          /></label>
-
-          <button type="submit" class="footer-subscribe-button">
-            Subscribe
-            <svg class="footer-icon-send" width="24" height="24">
-              <use href="./images/icons.svg#icon-send"></use>
-            </svg>
-          </button>
-        </form>
+            />
+            <button type="submit" class="footer-subscribe-button">
+              Subscribe
+              <svg class="footer-icon-send" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
-    <div class="modal-overlay">
+    <div class="modal-overlay" id="modal">
       <div class="modal">
         <button type="button" class="form-button-close">
           <svg class="form-icon-close" width="8" height="8">
