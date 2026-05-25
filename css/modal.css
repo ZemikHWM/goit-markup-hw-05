@@ -7,9 +7,9 @@
   height: 100%;
   z-index: 9999;
 
-  visibility: visible;
-  pointer-events: auto;
-  opacity: 1;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
 }
 .modal-overlay.is-open {
   pointer-events: auto;
