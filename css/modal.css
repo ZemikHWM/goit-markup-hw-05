@@ -7,12 +7,14 @@
   height: 100%;
   z-index: 9999;
 
-  pointer-events: none;
-  opacity: 0;
-}
-.modal-overlay.isopen {
+  visibility: visible;
   pointer-events: auto;
   opacity: 1;
+}
+.modal-overlay.is-open {
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal {
@@ -79,7 +81,7 @@
   width: 100%;
 }
 .form-input {
-  border: 1px solid #2e2f42;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 11px 38px;
   width: 100%;
@@ -109,9 +111,13 @@
 }
 
 .form-textarea {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
   width: 100%;
   height: 120px;
-  border: 1px solid #2e2f42;
+  border: 1px solidrgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 8px 16px;
   resize: none;
@@ -128,7 +134,8 @@
   border-color: #4d5ae5;
 }
 .form-policy-link {
-  line-height: 1.33333;
+  line-height: 1.16667;
+
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
@@ -155,6 +162,14 @@
 }
 .form-icon-checkbox {
   fill: #f4f4fd;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-native-checkbox:checked
+  + .form-label-input
+  .custom-checkbox
+  .form-icon-checkbox {
+  opacity: 1;
 }
 .form-native-checkbox:checked + .form-label-input .custom-checkbox {
   background-color: #404bbf;
@@ -185,4 +200,5 @@
 .form-button:hover,
 .form-button:focus {
   background-color: #404bbf;
+  cursor: pointer;
 }
